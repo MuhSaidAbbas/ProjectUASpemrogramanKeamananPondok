@@ -165,7 +165,7 @@ public class loginPage extends javax.swing.JFrame {
             xBeranda.setVisible(true);
             this.dispose();
         }
-        else if (userKeamanan.getText().contains("") && pwKeamanan.getText().equals("")){
+        else if (userKeamanan.getText().equals("") && pwKeamanan.getText().equals("")){
                JOptionPane.showMessageDialog(null,"Silahkan masukkan Username dan Password Anda");  
         }
         else if(userKeamanan.getText().equals("")){

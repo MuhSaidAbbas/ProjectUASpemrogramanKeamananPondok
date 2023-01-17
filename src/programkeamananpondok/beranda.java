@@ -39,6 +39,18 @@ public class beranda extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        tombolTelepon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolTeleponActionPerformed(evt);
+            }
+        });
+
+        tombolTamu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tombolTamuActionPerformed(evt);
+            }
+        });
+
         tombolPerizinan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tombolPerizinanActionPerformed(evt);
@@ -114,8 +126,22 @@ public class beranda extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tombolPerizinanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolPerizinanActionPerformed
-        // TODO add your handling code here:
+        InputPerizinan iIzin = new InputPerizinan();
+        iIzin.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_tombolPerizinanActionPerformed
+
+    private void tombolTamuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTamuActionPerformed
+        InputTamu iTamu = new InputTamu();
+        iTamu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_tombolTamuActionPerformed
+
+    private void tombolTeleponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolTeleponActionPerformed
+        InputTelepon iTelepon = new InputTelepon();
+        iTelepon.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_tombolTeleponActionPerformed
 
     /**
      * @param args the command line arguments
