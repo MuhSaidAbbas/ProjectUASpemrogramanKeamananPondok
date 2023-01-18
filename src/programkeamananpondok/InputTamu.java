@@ -4,6 +4,7 @@
  */
 package programkeamananpondok;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -35,7 +36,6 @@ public class InputTamu extends javax.swing.JFrame {
         panelTamu = new javax.swing.JPanel();
         jToggleButton1 = new javax.swing.JToggleButton();
         jToggleButton2 = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
         jToggleButton3 = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -85,12 +85,6 @@ public class InputTamu extends javax.swing.JFrame {
                 jToggleButton2ActionPerformed(evt);
             }
         });
-
-        jButton1.setBackground(new java.awt.Color(51, 203, 152));
-        jButton1.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Cetak Kartu");
-        jButton1.setPreferredSize(new java.awt.Dimension(110, 20));
 
         jToggleButton3.setBackground(new java.awt.Color(51, 203, 152));
         jToggleButton3.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
@@ -200,8 +194,7 @@ public class InputTamu extends javax.swing.JFrame {
                         .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(116, 116, 116))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelTamuLayout.createSequentialGroup()
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -270,7 +263,6 @@ public class InputTamu extends javax.swing.JFrame {
                 .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(84, 84, 84))
         );
@@ -323,14 +315,6 @@ public class InputTamu extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        tabel.addRow(new Object[]{
-            fieldNamaTamu.getText(), fieldAsalTamu.getText(), fieldNama.getText(), fieldKontak.getText()
-    });
-       tabelDataTamu.setModel(tabel);
-       fieldNamaTamu.setText("");
-       fieldAsalTamu.setText("");
-       fieldNama.setText("");
-       fieldKontak.setText("");
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void panelTamuComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_panelTamuComponentShown
@@ -371,10 +355,6 @@ public class InputTamu extends javax.swing.JFrame {
             }
         });
     }
-    
-    int Baris = 0;
-    static Object kolom[] = {"Nama Tamu", "Asal", "Nama", "Nomor Kontak"};
-    DefaultTableModel tabel = new DefaultTableModel (kolom, Baris);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bGroupStatus;
     private javax.swing.JComboBox<String> chooseStatusDikunjung;
@@ -384,7 +364,6 @@ public class InputTamu extends javax.swing.JFrame {
     private javax.swing.JTextField fieldNama;
     private javax.swing.JTextField fieldNamaTamu;
     private com.toedter.calendar.JDateChooser fieldTanggal;
-    private javax.swing.JButton jButton1;
     private com.toedter.calendar.JCalendar jCalendar1;
     private com.toedter.calendar.JDayChooser jDayChooser1;
     private javax.swing.JLabel jLabel1;
