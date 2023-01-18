@@ -64,6 +64,7 @@ public class loginPage extends javax.swing.JFrame {
         jLabel6.setText("Password");
 
         tombolLogin.setBackground(new java.awt.Color(51, 203, 152));
+        tombolLogin.setFont(new java.awt.Font("GeoSlab703 Md BT", 1, 14)); // NOI18N
         tombolLogin.setForeground(new java.awt.Color(255, 255, 255));
         tombolLogin.setText("Login");
         tombolLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -73,11 +74,11 @@ public class loginPage extends javax.swing.JFrame {
         });
 
         pwKeamanan.setBackground(new java.awt.Color(51, 203, 152));
-        pwKeamanan.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        pwKeamanan.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         pwKeamanan.setForeground(new java.awt.Color(255, 255, 255));
 
         userKeamanan.setBackground(new java.awt.Color(51, 203, 152));
-        userKeamanan.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        userKeamanan.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         userKeamanan.setForeground(new java.awt.Color(255, 255, 255));
         userKeamanan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
