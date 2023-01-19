@@ -95,16 +95,31 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JButton" name="tombolTelepon">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/programkeamananpondok/Telepon (1).jpg"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombolTeleponActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="tombolTamu">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/programkeamananpondok/Keluarga_Islami (1).jpg"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombolTamuActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="tombolPerizinan">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/programkeamananpondok/Surat_Izin (1).jpg"/>
+            </Property>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tombolPerizinanActionPerformed"/>
           </Events>

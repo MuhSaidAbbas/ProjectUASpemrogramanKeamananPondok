@@ -12,7 +12,8 @@ import javax.swing.table.DefaultTableModel;
  * @author Muh. Said Abbas
  */
 public class InputTamu extends javax.swing.JFrame {
-
+        String [] namaTamu = new String [100];
+        int indexCounter = 0;
     /**
      * Creates new form InputTamu
      */
@@ -45,15 +46,17 @@ public class InputTamu extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        fieldNamaTamu = new javax.swing.JTextField();
-        fieldAsalTamu = new javax.swing.JTextField();
-        fieldNama = new javax.swing.JTextField();
-        fieldKontak = new javax.swing.JTextField();
-        chooseStatusDikunjung = new javax.swing.JComboBox<>();
-        rButtonKunjungan = new javax.swing.JRadioButton();
+        fnTamu = new javax.swing.JTextField();
+        faTamu = new javax.swing.JTextField();
+        fNama = new javax.swing.JTextField();
+        fKontak = new javax.swing.JTextField();
+        csDikunjungi = new javax.swing.JComboBox<>();
+        jbrKunjungan = new javax.swing.JRadioButton();
         rButtonMenginap = new javax.swing.JRadioButton();
-        fieldTanggal = new com.toedter.calendar.JDateChooser();
-        fieldHari = new javax.swing.JComboBox<>();
+        fTanggal = new com.toedter.calendar.JDateChooser();
+        fHari = new javax.swing.JComboBox<>();
+        jIzin = new javax.swing.JLabel();
+        jToggleButton5 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,40 +124,40 @@ public class InputTamu extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel8.setText("Status");
 
-        fieldNamaTamu.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        fieldNamaTamu.setForeground(new java.awt.Color(51, 203, 152));
+        fnTamu.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        fnTamu.setForeground(new java.awt.Color(51, 203, 152));
 
-        fieldAsalTamu.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        fieldAsalTamu.setForeground(new java.awt.Color(51, 203, 152));
-        fieldAsalTamu.addActionListener(new java.awt.event.ActionListener() {
+        faTamu.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        faTamu.setForeground(new java.awt.Color(51, 203, 152));
+        faTamu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldAsalTamuActionPerformed(evt);
+                faTamuActionPerformed(evt);
             }
         });
 
-        fieldNama.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        fieldNama.setForeground(new java.awt.Color(51, 203, 152));
-        fieldNama.addActionListener(new java.awt.event.ActionListener() {
+        fNama.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        fNama.setForeground(new java.awt.Color(51, 203, 152));
+        fNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldNamaActionPerformed(evt);
+                fNamaActionPerformed(evt);
             }
         });
 
-        fieldKontak.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        fieldKontak.setForeground(new java.awt.Color(51, 203, 152));
+        fKontak.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        fKontak.setForeground(new java.awt.Color(51, 203, 152));
 
-        chooseStatusDikunjung.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        chooseStatusDikunjung.setForeground(new java.awt.Color(51, 203, 152));
-        chooseStatusDikunjung.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Silahkan Pilih Status yang Dikunjungi", "Kelas 7", "Kelas 8", "Kelas 9", "Kelas 10", "Kelas 11", "Kelas 12", "Pengabdian 1", "Pengabdian 2", "Staff", "Keluarga Pondok", " " }));
+        csDikunjungi.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        csDikunjungi.setForeground(new java.awt.Color(51, 203, 152));
+        csDikunjungi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Silahkan Pilih Status yang Dikunjungi", "Kelas 7", "Kelas 8", "Kelas 9", "Kelas 10", "Kelas 11", "Kelas 12", "Pengabdian 1", "Pengabdian 2", "Staff", "Keluarga Pondok", " " }));
 
-        bGroupStatus.add(rButtonKunjungan);
-        rButtonKunjungan.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        rButtonKunjungan.setForeground(new java.awt.Color(51, 203, 152));
-        rButtonKunjungan.setText("Kunjungan");
-        rButtonKunjungan.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        rButtonKunjungan.addActionListener(new java.awt.event.ActionListener() {
+        bGroupStatus.add(jbrKunjungan);
+        jbrKunjungan.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jbrKunjungan.setForeground(new java.awt.Color(51, 203, 152));
+        jbrKunjungan.setText("Kunjungan");
+        jbrKunjungan.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jbrKunjungan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rButtonKunjunganActionPerformed(evt);
+                jbrKunjunganActionPerformed(evt);
             }
         });
 
@@ -165,23 +168,51 @@ public class InputTamu extends javax.swing.JFrame {
         rButtonMenginap.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         rButtonMenginap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rButtonKunjunganActionPerformed(evt);
+                jbrKunjunganActionPerformed(evt);
             }
         });
 
-        fieldTanggal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(51, 203, 152), new java.awt.Color(51, 203, 152), new java.awt.Color(51, 203, 152), new java.awt.Color(51, 203, 152)));
-        fieldTanggal.setForeground(new java.awt.Color(51, 203, 152));
-        fieldTanggal.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        fTanggal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(51, 203, 152), new java.awt.Color(51, 203, 152), new java.awt.Color(51, 203, 152), new java.awt.Color(51, 203, 152)));
+        fTanggal.setForeground(new java.awt.Color(51, 203, 152));
+        fTanggal.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        fieldHari.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        fieldHari.setForeground(new java.awt.Color(51, 203, 152));
-        fieldHari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Hari", "Jum'at", "Sabtu", "Ahad", "Senin", "Selasa", "Rabu", "Kamis", " " }));
+        fHari.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        fHari.setForeground(new java.awt.Color(51, 203, 152));
+        fHari.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Hari", "Jum'at", "Sabtu", "Ahad", "Senin", "Selasa", "Rabu", "Kamis", " " }));
+
+        jIzin.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jIzin.setForeground(new java.awt.Color(51, 203, 152));
+        jIzin.setText("Jumlah Tamu pekan ini :  Tamu");
+        jIzin.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jIzinAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+
+        jToggleButton5.setBackground(new java.awt.Color(51, 203, 152));
+        jToggleButton5.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jToggleButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jToggleButton5.setText("Reset Data");
+        jToggleButton5.setPreferredSize(new java.awt.Dimension(30, 20));
+        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTamuLayout = new javax.swing.GroupLayout(panelTamu);
         panelTamu.setLayout(panelTamuLayout);
         panelTamuLayout.setHorizontalGroup(
             panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTamuLayout.createSequentialGroup()
+            .addGroup(panelTamuLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panelTamuLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panelTamuLayout.createSequentialGroup()
@@ -190,7 +221,9 @@ public class InputTamu extends javax.swing.JFrame {
                         .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(116, 116, 116))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelTamuLayout.createSequentialGroup()
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -203,24 +236,24 @@ public class InputTamu extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTamuLayout.createSequentialGroup()
-                                .addComponent(fieldHari, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(fHari, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fieldTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(fieldNamaTamu)
-                            .addComponent(fieldAsalTamu)
-                            .addComponent(fieldNama)
-                            .addComponent(fieldKontak)
-                            .addComponent(chooseStatusDikunjung, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(fTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fnTamu)
+                            .addComponent(faTamu)
+                            .addComponent(fNama)
+                            .addComponent(fKontak)
+                            .addComponent(csDikunjungi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panelTamuLayout.createSequentialGroup()
-                                .addComponent(rButtonKunjungan, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jbrKunjungan, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(rButtonMenginap, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addGap(29, 29, 29))
-            .addGroup(panelTamuLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTamuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jIzin)
+                .addGap(98, 98, 98))
         );
         panelTamuLayout.setVerticalGroup(
             panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,43 +265,47 @@ public class InputTamu extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addGroup(panelTamuLayout.createSequentialGroup()
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fieldHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(fHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(fieldNamaTamu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fnTamu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(fieldAsalTamu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(faTamu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(fieldNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(chooseStatusDikunjung, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(csDikunjungi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8))
                         .addGap(7, 7, 7)
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(fieldKontak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fKontak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rButtonKunjungan)
+                            .addComponent(jbrKunjungan)
                             .addComponent(rButtonMenginap)
                             .addComponent(jLabel7))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84))
+                .addGap(31, 31, 31)
+                .addComponent(jIzin)
+                .addGap(18, 18, 18)
+                .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jToggleButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelTamuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(61, 61, 61))
         );
 
-        rButtonKunjungan.getAccessibleContext().setAccessibleParent(rButtonKunjungan);
-        rButtonMenginap.getAccessibleContext().setAccessibleParent(rButtonKunjungan);
+        jbrKunjungan.getAccessibleContext().setAccessibleParent(jbrKunjungan);
+        rButtonMenginap.getAccessibleContext().setAccessibleParent(jbrKunjungan);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -290,36 +327,68 @@ public class InputTamu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void fieldAsalTamuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAsalTamuActionPerformed
+    private void faTamuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faTamuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAsalTamuActionPerformed
+    }//GEN-LAST:event_faTamuActionPerformed
 
-    private void fieldNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNamaActionPerformed
+    private void fNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fNamaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldNamaActionPerformed
+    }//GEN-LAST:event_fNamaActionPerformed
 
-    private void rButtonKunjunganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rButtonKunjunganActionPerformed
+    private void jbrKunjunganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbrKunjunganActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rButtonKunjunganActionPerformed
+    }//GEN-LAST:event_jbrKunjunganActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
-        fieldHari.setSelectedIndex(0);
-        fieldTanggal.setCalendar(null);
-        fieldNamaTamu.setText("");
-        fieldAsalTamu.setText("");
-        fieldNama.setText("");
-        chooseStatusDikunjung.setSelectedIndex(0);
-        fieldKontak.setText("");
+        fHari.setSelectedIndex(0);
+        fTanggal.setCalendar(null);
+        fnTamu.setText("");
+        faTamu.setText("");
+        fNama.setText("");
+        csDikunjungi.setSelectedIndex(0);
+        fKontak.setText("");
         bGroupStatus.clearSelection();
     
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        if(fnTamu.getText().equals("")){
+            JOptionPane.showMessageDialog(this, "Silahkan melengkapi Data Tamu", "PERHATIAN", JOptionPane.YES_OPTION);
+            }
+        else{
+            namaTamu[indexCounter] = ("" + fnTamu.getText()); 
+            indexCounter++;
+            jIzin.setText("Jumlah Tamu pekan ini : " + indexCounter + " Tamu");
+            JOptionPane.showMessageDialog(this, "Silahkan Kepada " + fnTamu.getText() + " untuk menunggu beberapa saat. Kami akan memanggilkan Ananda " + fNama.getText());}
+        
+        fHari.setSelectedIndex(0);
+        fTanggal.setCalendar(null);
+        fnTamu.setText("");
+        faTamu.setText("");
+        fNama.setText("");
+        csDikunjungi.setSelectedIndex(0);
+        fKontak.setText("");
+        bGroupStatus.clearSelection();
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void panelTamuComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_panelTamuComponentShown
         
     }//GEN-LAST:event_panelTamuComponentShown
+
+    private void jIzinAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jIzinAncestorAdded
+
+    }//GEN-LAST:event_jIzinAncestorAdded
+
+    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
+        int selection = JOptionPane.showConfirmDialog(this, "Apakah Anda ingin mereset data pekan ini?", "PERHATIAN", JOptionPane.YES_NO_OPTION);
+        int response = 0;
+        if(response==selection){
+            jIzin.setText("Jumlah Tamu pekan ini : " + "  Tamu");
+            indexCounter = 0;
+        }
+        else if(response!=selection){
+            jIzin.setText("Jumlah Tamu pekan ini : " + indexCounter + " Tamu");}
+    }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -357,15 +426,16 @@ public class InputTamu extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bGroupStatus;
-    private javax.swing.JComboBox<String> chooseStatusDikunjung;
-    private javax.swing.JTextField fieldAsalTamu;
-    private javax.swing.JComboBox<String> fieldHari;
-    private javax.swing.JTextField fieldKontak;
-    private javax.swing.JTextField fieldNama;
-    private javax.swing.JTextField fieldNamaTamu;
-    private com.toedter.calendar.JDateChooser fieldTanggal;
+    private javax.swing.JComboBox<String> csDikunjungi;
+    private javax.swing.JComboBox<String> fHari;
+    private javax.swing.JTextField fKontak;
+    private javax.swing.JTextField fNama;
+    private com.toedter.calendar.JDateChooser fTanggal;
+    private javax.swing.JTextField faTamu;
+    private javax.swing.JTextField fnTamu;
     private com.toedter.calendar.JCalendar jCalendar1;
     private com.toedter.calendar.JDayChooser jDayChooser1;
+    private javax.swing.JLabel jIzin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -377,8 +447,9 @@ public class InputTamu extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton5;
+    private javax.swing.JRadioButton jbrKunjungan;
     private javax.swing.JPanel panelTamu;
-    private javax.swing.JRadioButton rButtonKunjungan;
     private javax.swing.JRadioButton rButtonMenginap;
     // End of variables declaration//GEN-END:variables
 }

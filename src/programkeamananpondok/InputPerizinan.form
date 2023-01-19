@@ -50,48 +50,49 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jIzin" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jToggleButton3" min="-2" pref="107" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="buttonInput" min="-2" pref="77" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jToggleButton4" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jToggleButton3" min="-2" pref="107" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="buttonInput" min="-2" pref="77" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jToggleButton4" min="-2" pref="98" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel9" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel2" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel8" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="jLabel4" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel9" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel2" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jLabel8" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" alignment="1" min="-2" pref="108" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="cbStatusSantri" pref="276" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="pHari" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="dcTanggal" min="-2" pref="147" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="cbStatusSantri" pref="276" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="pHari" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="dcTanggal" min="-2" pref="147" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="nSantri" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="aSantri" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nKontak" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="cbStatusPerizinan" max="32767" attributes="0"/>
-                                  <Component id="aLasan" alignment="0" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="nSantri" alignment="0" max="32767" attributes="0"/>
+                              <Component id="aSantri" alignment="0" max="32767" attributes="0"/>
+                              <Component id="nKontak" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cbStatusPerizinan" max="32767" attributes="0"/>
+                              <Component id="aLasan" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="jIzin" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -138,9 +139,9 @@
                       <Component id="aLasan" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
                   <Component id="jIzin" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jToggleButton1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="buttonInput" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
@@ -425,7 +426,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="98" green="cb" red="33" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Jumlah santri yang Izin pekan ini sebanyak :  Santri"/>
+            <Property name="text" type="java.lang.String" value="Jumlah santri yang Izin pekan ini :  Santri"/>
           </Properties>
           <Events>
             <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="jIzinAncestorAdded"/>

@@ -39,18 +39,21 @@ public class beranda extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        tombolTelepon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/programkeamananpondok/Telepon (1).jpg"))); // NOI18N
         tombolTelepon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tombolTeleponActionPerformed(evt);
             }
         });
 
+        tombolTamu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/programkeamananpondok/Keluarga_Islami (1).jpg"))); // NOI18N
         tombolTamu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tombolTamuActionPerformed(evt);
             }
         });
 
+        tombolPerizinan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/programkeamananpondok/Surat_Izin (1).jpg"))); // NOI18N
         tombolPerizinan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tombolPerizinanActionPerformed(evt);

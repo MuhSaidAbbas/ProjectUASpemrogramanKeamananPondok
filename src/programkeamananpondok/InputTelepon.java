@@ -4,6 +4,8 @@
  */
 package programkeamananpondok;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Muh. Said Abbas
@@ -31,7 +33,7 @@ public class InputTelepon extends javax.swing.JFrame {
         jToggleButton4 = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        buttonInput = new javax.swing.JToggleButton();
         jToggleButton3 = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
         nKontak = new javax.swing.JTextField();
@@ -49,6 +51,8 @@ public class InputTelepon extends javax.swing.JFrame {
         aMenelpon = new javax.swing.JTextField();
         jIzin = new javax.swing.JLabel();
         jToggleButton5 = new javax.swing.JToggleButton();
+        cbStatusSantri = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
 
         jToggleButton4.setBackground(new java.awt.Color(51, 203, 152));
         jToggleButton4.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
@@ -76,11 +80,16 @@ public class InputTelepon extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton2.setBackground(new java.awt.Color(51, 203, 152));
-        jToggleButton2.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jToggleButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton2.setText("Input");
-        jToggleButton2.setPreferredSize(new java.awt.Dimension(80, 20));
+        buttonInput.setBackground(new java.awt.Color(51, 203, 152));
+        buttonInput.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        buttonInput.setForeground(new java.awt.Color(255, 255, 255));
+        buttonInput.setText("Input");
+        buttonInput.setPreferredSize(new java.awt.Dimension(80, 20));
+        buttonInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonInputActionPerformed(evt);
+            }
+        });
 
         jToggleButton3.setBackground(new java.awt.Color(51, 203, 152));
         jToggleButton3.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
@@ -167,6 +176,13 @@ public class InputTelepon extends javax.swing.JFrame {
             }
         });
 
+        cbStatusSantri.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cbStatusSantri.setForeground(new java.awt.Color(51, 203, 152));
+        cbStatusSantri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Silahkan Pilih Status yang Dikunjungi", "Kelas 7", "Kelas 8", "Kelas 9", "Kelas 10", "Kelas 11", "Kelas 12", "Pengabdian 1", "Pengabdian 2", "Staff", "Keluarga Pondok", " " }));
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jLabel9.setText("Status Santri");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -175,15 +191,15 @@ public class InputTelepon extends javax.swing.JFrame {
                 .addGap(89, 89, 89)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(22, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonInput, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -192,8 +208,7 @@ public class InputTelepon extends javax.swing.JFrame {
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -204,11 +219,21 @@ public class InputTelepon extends javax.swing.JFrame {
                             .addComponent(nSantri)
                             .addComponent(aSantri)
                             .addComponent(nKontak)
-                            .addComponent(cbStatus, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(aMenelpon)))
+                            .addComponent(cbStatus, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jIzin)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jIzin))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(28, 28, 28)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cbStatusSantri, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(aMenelpon))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(24, 24, 24))
         );
         jPanel1Layout.setVerticalGroup(
@@ -241,16 +266,23 @@ public class InputTelepon extends javax.swing.JFrame {
                             .addComponent(nKontak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)))
                     .addComponent(jLabel8))
-                .addGap(17, 17, 17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbStatusSantri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aMenelpon, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(46, 46, 46))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(aMenelpon, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addComponent(jIzin)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonInput, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43))
@@ -298,21 +330,41 @@ public class InputTelepon extends javax.swing.JFrame {
         int selection = JOptionPane.showConfirmDialog(this, "Apakah Anda ingin mereset data pekan ini?", "PERHATIAN", JOptionPane.YES_NO_OPTION);
         int response = 0;
         if(response==selection){
-            jIzin.setText("Jumlah santri yang Izin pekan ini sebanyak : " + " Santri");
+            jIzin.setText("Jumlah santri yang Menelpon pekan ini : " + " Santri");
+            indexCounter = 0;
         }
         else if(response!=selection){
-            jIzin.setText("Jumlah santri yang Izin pekan ini sebanyak : " + indexCounter + " Santri");}
+            jIzin.setText("Jumlah santri yang Menelpon pekan ini : " + indexCounter + " Santri");}
     }//GEN-LAST:event_jToggleButton4ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
         int selection = JOptionPane.showConfirmDialog(this, "Apakah Anda ingin mereset data pekan ini?", "PERHATIAN", JOptionPane.YES_NO_OPTION);
         int response = 0;
         if(response==selection){
-            jIzin.setText("Jumlah santri yang Izin pekan ini sebanyak : " + " Santri");
+            jIzin.setText("Jumlah santri yang Menelpon pekan ini : " + "  Santri");
         }
         else if(response!=selection){
-            jIzin.setText("Jumlah santri yang Izin pekan ini sebanyak : " + indexCounter + " Santri");}
+            jIzin.setText("Jumlah santri yang Menelpon pekan ini : " + indexCounter + " Santri");}
     }//GEN-LAST:event_jToggleButton5ActionPerformed
+
+    private void buttonInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonInputActionPerformed
+        if(nSantri.getText().equals("")){
+            JOptionPane.showMessageDialog(this, "Silahkan melengkapi data Santri", "PERHATIAN", JOptionPane.YES_OPTION);
+            }
+        else{
+            namaSantri[indexCounter] = ("" + nSantri.getText()); 
+            indexCounter++;
+            jIzin.setText("Jumlah santri yang Menelpon pekan ini : " + indexCounter + " Santri");
+            JOptionPane.showMessageDialog(this, "Silahkan Ananda " + nSantri.getText() + " untuk mengambil nomor antrian Menelpon Ananda");}
+        
+            cbHari.setSelectedIndex(0);
+            dTanggal.setCalendar(null);
+            nSantri.setText("");
+            aSantri.setText("");
+            cbStatusSantri.setSelectedIndex(0);
+            nKontak.setText("");
+            aMenelpon.setText("");  
+    }//GEN-LAST:event_buttonInputActionPerformed
 
     /**
      * @param args the command line arguments
@@ -352,8 +404,10 @@ public class InputTelepon extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField aMenelpon;
     private javax.swing.JTextField aSantri;
+    private javax.swing.JToggleButton buttonInput;
     private javax.swing.JComboBox<String> cbHari;
     private javax.swing.JComboBox<String> cbStatus;
+    private javax.swing.JComboBox<String> cbStatusSantri;
     private com.toedter.calendar.JDateChooser dTanggal;
     private javax.swing.JLabel jIzin;
     private javax.swing.JLabel jLabel1;
@@ -363,9 +417,9 @@ public class InputTelepon extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToggleButton jToggleButton3;
     private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JToggleButton jToggleButton5;
