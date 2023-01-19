@@ -167,16 +167,16 @@ public class loginPage extends javax.swing.JFrame {
             this.dispose();
         }
         else if (userKeamanan.getText().equals("") && pwKeamanan.getText().equals("")){
-               JOptionPane.showMessageDialog(null,"Silahkan masukkan Username dan Password Anda");  
+               JOptionPane.showMessageDialog(null, "Silahkan masukkan Username dan Password Anda", "PERHATIAN", JOptionPane.YES_OPTION);  
         }
         else if(userKeamanan.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Silahkan masukkan Username Anda");
+            JOptionPane.showMessageDialog(null,"Silahkan masukkan Username Anda", "PERHATIAN", JOptionPane.YES_OPTION);
         }
         else if(pwKeamanan.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Silahkan masukkan Password Anda");
+            JOptionPane.showMessageDialog(null,"Silahkan masukkan Password Anda", "PERHATIAN", JOptionPane.YES_OPTION);
         }
         else{
-            JOptionPane.showMessageDialog(null,"Username dan Password yang Anda masukkan salah. Silahkan masukkan kembali");  
+            JOptionPane.showMessageDialog(null,"Username dan Password yang Anda masukkan salah. Silahkan masukkan kembali", "PERHATIAN", JOptionPane.YES_OPTION);  
         }
     }//GEN-LAST:event_tombolLoginActionPerformed
 
